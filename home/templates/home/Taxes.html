@@ -1,0 +1,165 @@
+{% extends 'home\base.html' %}
+
+
+{% block contact %}
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+
+        <title>Taxes</title>
+
+    </head>
+
+    <style>
+
+        ul.s {
+
+            text-align: center;
+
+            padding: 5px 0px;
+
+            margin: 0;
+
+            background-color: rgb(202, 196, 196);
+
+        }
+
+    </style>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/tax.css' %}"/>
+
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <body>
+
+    <div class="box">
+
+        <!--header-->
+
+        <div>
+
+            <ul class="s">
+
+                <li><a href="{% url 'home' %}">Home</a></li>
+
+                <li><a href="{% url 'privacypolicy' %}">Privacy & Policy</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h1>Taxes</h1>
+
+            <br>
+
+            <strong>Amendments and Changes</strong>
+
+            <p>
+
+                Amendment of a Confirmed Booking.
+
+                Made via My Booking online.
+
+                When an amendment is made a new order is created.<br>
+
+                Until new order (amendment) is confirmed by rental provider the original order remains valid.
+
+                After confirmation the original order is automatically cancelled and all related payments will be
+                adjusted.<br>
+
+                Please Note: Amending your booking is FREE OF CHARGE Prices vary and local provider may be different.
+                New
+                voucher will be issued.<br>
+
+                Amending a not confirmed booking results in the original order being cancelled immediately.<br>
+
+                Extension of a booking in rental can be made either by making a new booking via "website name" (requires
+                confirmation by a local provider, not necessarily the same) or by arranging it with the local
+                provider.<br>
+
+                In case that the customer wishes to drop the car off earlier than booked, "website name" will not refund
+                any
+                amount for the unused days.<br>
+
+            </p>
+
+            <strong>Optional items and Fees:</strong>
+
+            <p>
+
+                Any kind of alteration made locally to your rental, such as a change in pick up/ drop off time/ date/
+                locations etc.<br> Which is different to that stated on your voucher, could incur extra charges.
+
+            </p>
+
+            <strong>Child Seats</strong>
+
+            <p>
+
+                Mandatory in most countries, must be ordered at the time of booking.
+
+                Note: Standard of Baby/ child seats in other countries may differ.<br>
+
+                Taking your own is recommended.
+
+                Due to insurance rules you will be required to fit the seat in the car.
+
+            </p>
+
+            <strong>Ferrying the rental car</strong>
+
+            <p>
+
+                Domestic is normally allowed, must be requested at the destination. Any extra cost will be paid locally.
+                <br>You must inform the car rental company that you will take the car outside the city.
+
+            </p>
+
+            <strong>Driving Licence & Age Limits</strong>
+
+            <p> In all cases a full valid driving licence is required at all destinations.<br> If a new style saudi
+                driver's
+                license is held, both paper and card parts must be produced.<br> In some countries, an International
+                driving
+                licence is also required in addition to the National licence.
+
+            </p>
+
+            <strong>Delivery & Collection Charges</strong>
+
+            <p>
+
+                Any out of operating hour charges, if applicable, are always INCLUDED in our prices.<br>
+
+                Any deviation from the confirmed pick up/ return times on your voucher could incur extra charges, closed
+                station or your booking treated as No Show.<br>
+
+                We strongly recommend contacting your local provider in the case of any time change.
+
+            </p>
+
+        </div>
+
+    </div>
+    </body>
+
+    </html>
+{% endblock contact %}

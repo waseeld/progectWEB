@@ -1,0 +1,55 @@
+{% extends 'home\base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block contact %}
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/signup.css' %}"/>
+
+    <title>SignIn</title>
+
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <div class="box">
+
+        <h3 id="form-title">Sign In</h3>
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Sign In</button>
+                <p>
+                    <small class="text-muted ml-2">
+                        <a href="{% url 'password_reset' %}">Forgot Password ?</a>
+                    </small>
+                </p>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Creat New Account <a class="ml-2" href="{% url 'signup' %}">SignUp</a>
+            </small>
+        </div>
+    </div>
+
+
+{% endblock contact %}
+
+

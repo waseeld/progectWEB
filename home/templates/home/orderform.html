@@ -1,0 +1,38 @@
+{% extends 'home/base.html' %}
+
+{% block contact %}
+
+{% load static %}
+            <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}"/>
+<div class="box">
+    <title>Confirm Order</title>
+    <h1 style="text-align: center">Confirm Order</h1>
+    <p style="text-align: center">If you need any help,<u><b>Don't</b></u> hesitate to contact us</p>
+
+    <form style="padding: 20px" id="contact-form" name="contact-form" action="{% url 'orderform' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="formGroupExampleInput">First Name</label>
+            <input type="text" class="form-control" id="first_name1" name="first_name1">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Last Name</label>
+            <input type="text" class="form-control" id="last_name1"  name="last_name1">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput">Phone Number</label>
+            <input type="text" class="form-control" id="phone_number1" name="phone_number1">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Your Order ID</label>
+            <input type="text" class="form-control" id="id_order1"  name="id_order1">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Your Order Number</label>
+            <input type="text" class="form-control" id="order_number1"  name="order_number1">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock contact %}

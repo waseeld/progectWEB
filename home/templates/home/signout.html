@@ -1,0 +1,30 @@
+{% extends 'home/base.html' %}
+
+
+{% block contact %}
+
+    <div id="google_translate_element"></div>
+    <title>SignOut</title>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <h2>You have been Signout!!</h2>
+
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Do you wanna <a class="ml-2" href="{% url 'signin' %}">Sign In Again</a>?
+        </small>
+    </div>
+
+{% endblock contact %}

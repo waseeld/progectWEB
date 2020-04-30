@@ -1,0 +1,59 @@
+{% extends 'home\base.html' %}
+{% load static %}
+
+
+{% block contact %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/order.css' %}"/>
+    <title>Order Page</title>
+    <!DOCTYPE html>
+
+
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+      <div class="box">
+    </br>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.qrcode.js"></script>
+        <title>OrderPage</title>
+
+    </head>
+    <body>
+    Thank you...
+    <br>
+    <br><strong>
+    We received your order, please come to our branch to get your car and pay
+    </strong> <br>
+    To confirm your order please click here
+    <a href="{% url 'orderform' %}">order</a>
+    <br>
+
+
+    <p>Your order number is</p>
+
+    <p id="random_number"></p>
+    <script>
+        var randomNumber = Math.floor((Math.random() * 9000) + 1000);
+        document.getElementById("random_number").innerHTML = randomNumber;
+    </script>
+
+
+    </body>
+    </html>
+        </div>
+{% endblock contact %}

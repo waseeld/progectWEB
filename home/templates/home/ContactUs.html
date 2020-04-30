@@ -1,0 +1,91 @@
+{% extends 'home\base.html' %}
+
+{% load static %}
+
+{% block contact %}
+
+        <title>ContactUS</title>
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <div class="box">
+        <title>ContactUs</title>
+
+        <strong>GET HELP?</strong>
+
+
+        <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}"/>
+
+
+        <header>
+
+            <div class=”container”>
+
+                <div id=”branding”>
+
+                </div>
+
+                <nav>
+
+                    <br>
+
+
+                    <ul>
+
+                        <li><a href="{% url 'gethelp' %}">Get Help?</a></li>
+
+                        <li><a href="{% url 'signin' %}">Sign In</a></li>
+
+                        <li><a href="{% url 'signup' %}">Sign Up</a></li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+        </header>
+
+        <section id=”showcase”>
+
+            <div class=”container”>
+
+                <br>
+
+                <br>
+
+                <strong> Contact Us</strong>
+
+                <ul>
+
+                    <p>Via:</p>
+
+                    <li>Email: car-rental@outlook.com</li>
+
+                    <li>Phone Number: +966545808825</li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+        <hr>
+
+        <a href="{% url 'home' %}">Home</a>
+    </div>
+
+
+{% endblock contact %}

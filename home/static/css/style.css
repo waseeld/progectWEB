@@ -1,0 +1,48 @@
+
+body {
+    background-image: url("../home/images/op.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.box {
+    margin: 80px auto;
+    background-color: rgba(220, 220, 220, 0.8);
+    text-align: center;
+    width: 50%;
+    padding: 30px;
+     position: static;
+    border: 1px solid;
+}
+
+.Weather{
+
+    width: 1354px;
+    margin: auto;
+}
+
+.map-container{
+        overflow:hidden;
+        padding-bottom:56.25%;
+        position:relative;
+        height:0;
+        }
+    .map-container iframe{
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        position:absolute;
+        }
+
+.footer{
+    margin: 0 auto;
+    background-color: rgba(220, 220, 220, 0.8);
+    text-align: center;
+    width: 100%;
+    padding: 25px;
+    position: static;
+    border: 1px solid
+
+}

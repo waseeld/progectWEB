@@ -1,0 +1,222 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Home</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="{% static  'home/images/LogoCar.jpg' %}" width="50" height="50" >
+        CarRental
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'gethelp' %}">GetHelp</a>
+            </li>
+
+               <li class="nav-item">
+                <a class="nav-link" href="{% url 'style_loc' %}">Location</a>
+            </li>
+        </ul>
+
+        <ul class="navbar-nav mr-auto">
+                 {% if user.is_authenticated %}
+                       <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signout' %}">Sign Out</a>
+                    </li>
+                 {% else %}
+                     <li class="nav-item active">
+                         <a class="nav-link" href="{% url 'signin' %}">SignIn</a>
+                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signup' %}">SignUp</a>
+                    </li>
+                 {% endif %}
+        </ul>
+
+    </div>
+</nav>
+
+
+
+{% block contact %}
+{% endblock contact %}
+
+
+
+<footer class="page-footer footer container-fluid text-center" style="margin-bottom : 0px;" >
+
+
+<!-- Footer -->
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-4 mx-auto">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Helpful links</h5>
+        <p>Here you can find some links that might help you in Madinah </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h7 class="font-weight-bold text-uppercase mt-3 mb-4">Popular Hotels</h7>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://www.oberoihotels.com/?utm_source=affred&utm_medium=aff&utm_campaign=gbl-affmkt&utm_source=affred&utm_medium=aff&utm_campaign=gbl-affmkt&_affclk=adn:3817::EAIaIQobChMIr6jE8-rq6AIVWfhRCh1nlgleEAAYASAAEgIKSfD_BwE:8002y1">The Oberoi Hotel </a>
+          </li>
+          <li>
+            <a href="https://www.yamsafer.com/en/saudi-arabia/medina/hotel/dar-al-taqwa-hotel">Dar Al-Taqwa Hotel </a>
+          </li>
+          <li>
+            <a href="https://www.hilton.com/en/hotels/medhihi-madinah-hilton/">Madinah Hilton Hotel</a>
+          </li>
+          <li>
+            <a href="https://ar.tripadvisor.com/Hotel_Review-g298551-d299198-Reviews-InterContinental_Madinah_Dar_Al_Iman-Medina_Al_Madinah_Province.html">Dar Al-Iman Intercontinental</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h7 class="font-weight-bold text-uppercase mt-3 mb-4">Popular Rental Cars</h7>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://www.alwefaq.com/ar?campaign=search&campaign_type=competitor&gclid=EAIaIQobChMIicqPl-zq6AIVzbvVCh0vbwEVEAAYASAAEgITq_D_BwE
+">Al-wefaq</a>
+          </li>
+          <li>
+            <a href="https://www.budgetsaudi.com/">Budget</a>
+          </li>
+          <li>
+            <a href="https://www.theebonline.com/en/home/">Theeb</a>
+          </li>
+          <li>
+            <a href="https://alrehailico.com/">Alrehaili</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-2 mx-auto">
+
+        <!-- Links -->
+        <h7 class="font-weight-bold text-uppercase mt-3 mb-4">Company Information</h7>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="{% url 'AboutUs' %}">About Us</a>
+          </li>
+          <li>
+            <a href="{% url 'location' %}">Location</a>
+          </li>
+            <li>
+            <a href="{% url 'gethelp' %}">Get help</a>
+          </li>
+            <li>
+            <a href="{% url 'contactus' %}">Contact Us</a>
+          </li>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <hr>
+
+  <!-- Call to action -->
+  <ul class="list-unstyled list-inline text-center py-2">
+    <li class="list-inline-item">
+      <h5 class="mb-1">Register for free</h5>
+    </li>
+    <li class="list-inline-item">
+      <a href="{% url 'signup' %}" class="btn btn-danger btn-rounded">Sign up!</a>
+    </li>
+  </ul>
+  <!-- Call to action -->
+
+</footer>
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                    </div>
+        {% endfor %}
+        {% endif %}
+
+
+
+</html>
+
+
+
+
+
+
+

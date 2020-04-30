@@ -1,0 +1,80 @@
+{% extends 'home\base.html' %}
+
+
+{% block contact %}
+
+    <title>GetHelp</title>
+    <!DOCTYPE html>
+
+    <html>
+
+    <head>
+
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/gethelp.css' %}"/>
+
+        <div id="google_translate_element"></div>
+
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script>
+
+        <script type="text/javascript"
+                src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+        </head>
+
+
+    <body>
+    <div class="box">
+
+        <title>GetHelp</title>
+
+        <strong>GET HELP?</strong>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+              integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+              crossorigin="anonymous">
+
+
+        </head>
+
+
+        <div>
+
+            <br>
+
+
+            <a href="{% url 'contactus' %}">Contact Us</a>
+
+            <br>
+
+            <a href="{% url 'privacypolicy' %}">Privacy Policy</a>
+
+            <br>
+
+            <a href="{% url 'taxes' %}">Taxes</a>
+
+            <br>
+            <a href="{% url 'selectcar' %}">Select Car</a>
+
+            <br>
+            <a href="{% url 'AboutUs' %}">About Us</a>
+
+        </div>
+
+        <hr>
+
+        <a href="{% url 'home' %}">Home</a>
+
+    </div>
+    </body>
+
+    </html>
+
+{% endblock contact %}
